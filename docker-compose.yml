@@ -1,0 +1,24 @@
+services:
+  ssmcp:
+    build: .
+    container_name: ssmcp
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - SSMCP_TRANSPORT=${SSMCP_TRANSPORT:-http}
+      - SSMCP_HOST=0.0.0.0
+      - SSMCP_PORT=8890
+      - SSMCP_WHISPER_CACHE_DIR=/data/whisper
+      - YT_QUOTA_STATE_PATH=/data/quota_state.json
+    ports:
+      - "${SSMCP_BIND_IP:-127.0.0.1}:${SSMCP_PORT:-8890}:8890"
+    volumes:
+      - ssmcp_data:/data
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+
+volumes:
+  ssmcp_data:

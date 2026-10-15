@@ -1,0 +1,64 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ssmcp"
+version = "1.0.0"
+description = "socialSimple MCP (sSmcp): Unified MCP server for YouTube, TikTok, Instagram, and Threads with Faster-Whisper audio transcription and Tesseract keyframe/slide OCR"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "bledny1099" },
+]
+keywords = [
+    "mcp",
+    "model-context-protocol",
+    "social-media",
+    "youtube",
+    "tiktok",
+    "instagram",
+    "threads",
+    "whisper",
+    "faster-whisper",
+    "ocr",
+    "tesseract",
+    "transcript",
+    "yt-dlp",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Topic :: Internet :: WWW/HTTP",
+]
+dependencies = [
+    "mcp>=1.6.0",
+    "httpx>=0.27.0",
+    "pydantic>=2.6.0",
+    "python-dotenv>=1.0.0",
+    "uvicorn>=0.30.0",
+    "starlette>=0.37.0",
+    "yt-dlp>=2025.1.0",
+    "curl-cffi>=0.7.0",
+    "faster-whisper>=1.1.0",
+    "Pillow>=10.0.0",
+    "python-multipart>=0.0.9",
+]
+
+[project.urls]
+Homepage = "https://github.com/bledny1099/sSmcp"
+Repository = "https://github.com/bledny1099/sSmcp.git"
+Issues = "https://github.com/bledny1099/sSmcp/issues"
+
+[project.scripts]
+ssmcp = "ssmcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ssmcp"]

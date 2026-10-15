@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Secrets & environment configs
+.env
+.env.*
+!.env.example
+*cookies*.txt
+*.pem
+*.key
+client_secret*.json
+
+# Runtime state & caches
+/data/
+whisper_cache/
+quota_state.json
+oauth_state.json
+*.mp4
+*.mp3
+*.m4a
+*.wav
+*.webm
+*.jpg
+*.jpeg
+*.png
+
+# OS & IDE files
+.DS_Store
+.idea/
+.vscode/

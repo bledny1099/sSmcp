@@ -1,0 +1,10 @@
+# Caddy reverse proxy snippet for sSmcp (socialSimple MCP)
+# Replace mcp.example.com with your actual domain.
+
+mcp.example.com {
+    reverse_proxy 127.0.0.1:8890 {
+        flush_interval -1
+        header_up X-Forwarded-Proto {scheme}
+        header_up X-Forwarded-Host {host}
+    }
+}
