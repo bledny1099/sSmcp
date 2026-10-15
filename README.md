@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.jpg" alt="sSmcp - socialSimple MCP" width="260" />
+</p>
+
 # sSmcp (socialSimple MCP)
 
 **socialSimple MCP (`sSmcp`)** is a single, self-contained Model Context Protocol (MCP) server for **YouTube**, **TikTok**, **Instagram**, and **Threads**.

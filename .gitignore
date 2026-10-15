@@ -35,6 +35,7 @@ oauth_state.json
 *.jpg
 *.jpeg
 *.png
+!assets/*
 
 # OS & IDE files
 .DS_Store
